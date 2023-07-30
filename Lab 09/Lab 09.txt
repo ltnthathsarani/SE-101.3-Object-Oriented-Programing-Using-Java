@@ -1,0 +1,105 @@
+Question 01
+
+(1)
+ package com.mycompany.test02;
+ public interface Cnotainer {
+     double PI=3.14159;
+     double volume();
+    }
+
+(2)
+package com.mycompany.test02;
+
+public class CylindricalContainer implements Cnotainer{
+    private double height;
+    private double radius;
+    
+    public CylindricalContainer(double height,double radius )
+    {
+        this.height=height;
+        this.radius=radius;
+    }
+    public double getH()
+    {
+        return height;
+    }
+    public double getR()
+    {
+        return radius;
+    }
+    public void setH(double height)
+    {
+        this.height=height;
+    }
+    public void setR(double radius)
+    {
+        this.radius=radius;
+    }
+    
+    public double volume()
+    {
+        double a=PI*radius*radius;
+        return a*height;
+    }
+    
+    
+}
+
+(3)
+package com.mycompany.test02;
+public class Test02 {
+
+    public static void main(String[] args) {
+        CylindricalContainer cc=new CylindricalContainer(22,14);
+        System.out.println("volume: "+cc.volume());
+        
+    }
+}
+
+
+
+Question 04
+
+package com.mycompany.test02;
+public interface PlayerController {
+    void moveup();
+    void movedown();
+    void moveleft();
+    void moveright();
+}
+package com.mycompany.test02;
+
+public class LifeGame {
+    public void moveup()
+    {
+        System.out.println("Player move up");   
+    }
+    public void movedown()
+    {
+        System.out.println("Player move down");
+    }
+    public void moveleft()
+    {
+        System.out.println("Player move left");
+    }
+    public void moveright()
+    {
+        System.out.println("Player move right");
+    }
+    
+}
+package com.mycompany.test02;
+
+public class Test02 {
+
+    public static void main(String[] args) {
+        LifeGame Lg=new LifeGame();
+        Lg.moveup();
+        Lg.movedown();
+        Lg.moveleft();
+        Lg.moveright();
+        
+    }
+}
+
+
